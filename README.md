@@ -429,7 +429,7 @@ When you clicked that button, turns out Sinatra didn't know that ditty (i.e. you
 
 ```ruby
 # create route
-  post '/add' do
+  post '/' do
     # params are in a hash called params, check your terminal
     # extra puts statements help you find this output amongst the very verbose terminal output
     puts "HERE IS THE PARAMS---------------------------------------"
