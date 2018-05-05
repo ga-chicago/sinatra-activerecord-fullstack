@@ -12,16 +12,24 @@ class ItemController < ApplicationController
 	get '/add' do
 		
 		@page = "Add Item"
-		@action = '/items'
-		@method = "POST"
+		@action = "/items"
+		@method = "post"
 		@placeholder = "Enter your item!"
 		@value = ""
 		@buttontext = "Add Item"
+
 		erb :add_item #this view will be created in the next step
 	end
 
+	#create route
 
+	post '/' do
+		puts 'HERE IS THE PARAMS ------------------------------------'
+		pp params
+		puts '----------------------------------------'
+		'you posted. check your terminal'
 
+	end
 
 
 
