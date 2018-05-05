@@ -9,8 +9,7 @@ class ItemController < ApplicationController
 
 	#add route
 
-	get '/add' do
-		
+	get '/add' do	
 		@page = "Add Item"
 		@action = "/items"
 		@method = "post"
@@ -24,14 +23,14 @@ class ItemController < ApplicationController
 	#create route
 
 	post '/' do
-		puts 'HERE IS THE PARAMS ------------------------------------'
 		pp params
-		puts '----------------------------------------'
-		'you posted. check your terminal'
 
+		#adding something with ActiveRecord
+		@item         = Item.new
+		@item.title   = params[:title]
+		@item.user_id = nil #this will change later
+		@item.save
+
+		@item.to_json
 	end
-
-
-
 end
-
