@@ -10,9 +10,20 @@ class ItemController < ApplicationController
 	#add route
 
 	get '/add' do
-
+		
+		@page = "Add Item"
+		@action = '/items'
+		@method = "POST"
+		@placeholder = "Enter your item!"
+		@value = ""
+		@buttontext = "Add Item"
 		erb :add_item #this view will be created in the next step
-
 	end
 
+
+
+
+
+
 end
+
