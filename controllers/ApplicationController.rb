@@ -12,6 +12,7 @@ set :views, File.expand_path('../views', File.dirname(__FILE__))
 
 
 	get '/' do
+		@page = "Hello"
 		erb :hello
 
 	end
