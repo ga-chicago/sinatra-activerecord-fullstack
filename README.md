@@ -587,9 +587,10 @@ Add a nav. If you want you can also add a site-wide title.
 ```
   <nav>
     <!-- REMEMBER: DO NOT USE INLINE STYLES.  -->
-    <p style="display: inline-block;">Nav:</p>
-    <a href="/items">Item list</a> •
-    <a href="/items/add">Add Items</a>
+    <p style="display: inline-block;">Nav:
+      <a href="/items">Item list</a> •
+      <a href="/items/add">Add Items</a>
+    </p>
   </nav>
   
   <h1 id="app-name">Awesome Site!</h1> 
@@ -700,7 +701,7 @@ body {
 </details>
 <br>
 
-Then put the styles from your html in your CSS and add classes for them, where necessary in your html. How you do all of this is up to you, click below to see an example (html omitted) if you like.  You can delete the extra stuff like "everything in this red box", etc.
+Then put the styles from your html in your CSS and add classes for them, where necessary in your html. How you do all of this is up to you, click below to see an example (html omitted) if you like. **Just be sure to remove all the inline styles from your templates**. You can delete the extra stuff like "everything in this red box", etc.
 
 <details>
 
@@ -939,6 +940,9 @@ Don't worry about making the login actually work yet, just make sure everything 
 
 ```erb
 <h2>Sign up:</h2>
+
+<h3>Already have an account? Log in <a href="/user/login">here</a></h3>
+
 <form action="/user/register" method="POST">
 	<input type="text" name="username" placeholder="desired username" /><br />
 	<input type="password" name="password" placeholder="password"><br />
@@ -1004,6 +1008,8 @@ map('/user') {
 
 </details>
 
+**Test your login and register routes/templates and make sure everything works like you expect it to. If they do, then....**
+
 ---
 
 :red_circle: Commit: "User login/register templates, User controller with dummy routes (that just send back JSON)"
@@ -1012,7 +1018,7 @@ map('/user') {
 
 ### 19. Make the post route for login actually do the login.
 
-Remember to set session variables appropriately--is the user logged in?  Once they've successfully logged in, tell them "logged in as...." using the messaging functionality you just built.
+Remember to set session variables appropriately--is the user logged in?  Once they've successfully logged in, tell them "logged in as...." using the messaging functionality you just built.  Remember, several commits back we used our `seeds.sql` to add one user -- use that username and password.
 
 Hint: try .find_by 
 
@@ -1051,7 +1057,7 @@ Hint: try .find_by
 
 Remember session stuff. 
 
->Tip: Don't be rude to the user by forcing them to log in again after registering. Registering should automatically log them in.
+>Tip: Don't be rude to the user by forcing them to log in again after registering. Registering should automatically log them in and take them to the default/home/main/whatever page.
 
 <details>
 
