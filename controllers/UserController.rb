@@ -15,7 +15,7 @@ class UserController < ApplicationController
 	post '/login' do
 
 		# params.to_json
-		
+
 		@user = User.find_by(username: params[:username])
 
 		if @user && @user.password == params[:password]
@@ -33,7 +33,13 @@ class UserController < ApplicationController
 
 #why the post route only work with the user/register?
 	post '/user/register' do
-		params.to_json
+		@user = User.new
+		@user.username = params[:username]
+		@user.password = params[:password]
+		@user.save
+		session[:logged_in] = true
+		session[:username] = @user.username
+		session[:message] = "Thank you for registering as #{@user.username}. Enjoy the site!"
 	end
 
 end
