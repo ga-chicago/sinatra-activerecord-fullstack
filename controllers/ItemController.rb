@@ -37,4 +37,12 @@ class ItemController < ApplicationController
 		# @item.to_json
 		redirect '/items'
 	end
+
+	delete '/:id' do
+		@item = Item.find params[:id]
+		@item.destroy
+		redirect '/items'
+	end
+
+
 end

@@ -2,8 +2,13 @@
 
 <ul>
 
-	<% @items.each do |item| %>
-		<li><%= item.title %></li>
+	<% @items.each do |item| %> 
+			<form action="/items/<%= item.id %> " method="POST">
+				<input type="hidden" name="_method" value="DELETE" />
+				<li><%= item.title %></li>
+				<button>Delete</button>
+			</form>
+
 	<%	end %> 
-	
+
 </ul>
