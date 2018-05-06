@@ -10,8 +10,8 @@ class ItemController < ApplicationController
 	#index route
 
 	get '/' do
-		@items = Item.all
-		# @items.to_json
+		@user = User.find session[:user_id]
+		@items = @user.items
 		@page = 'Index of items'
 		erb :item_index
 
