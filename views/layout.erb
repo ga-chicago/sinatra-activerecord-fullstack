@@ -8,10 +8,22 @@
 <body>
 
 	<nav>
-		<p>Nav:
+
+		<div>
+			<p>Nav:</p>
 			<a href="/items">Item List</a>
 			<a href="/items/add">Add Items</a>
-		</p>
+	 </div>
+
+	 <div>
+	 	<% if !session[:logged_in] %>
+	 		<a href="/user/login">Login</a>
+	 	<% else %>
+	 		<p>Logged in as <%= session[:username] %> </p>
+	 		<a href="/user/logout">Logout</a>
+	 	<% end %>
+	 	
+	 </div>
 
 	</nav>	
 
