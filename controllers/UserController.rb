@@ -42,4 +42,10 @@ class UserController < ApplicationController
 		session[:message] = "Thank you for registering as #{@user.username}. Enjoy the site!"
 	end
 
+	get '/logout' do
+		session[:username] = nil
+		session[:logged_in] = false
+		redirect '/user/login'
+	end
+
 end
