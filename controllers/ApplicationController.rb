@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
 		database: 'item'
 	)
 
+	set :public_dir, File.expand_path('../public', File.dirname(__FILE__))
 	set :views, File.expand_path('../views', File.dirname(__FILE__))
 	use Rack::MethodOverride
 	set :method_override, true

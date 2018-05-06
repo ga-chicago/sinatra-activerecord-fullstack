@@ -2,19 +2,20 @@
 <html>
 <head>
 	<title><%= @page %></title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	
 </head>
 <body>
 
 	<nav>
-		<p style="display: inline-block;">Nav:
+		<p>Nav:
 			<a href="/items">Item List</a>
 			<a href="/items/add">Add Items</a>
 		</p>
 
 	</nav>	
 
-	<h1 id="app-name"style="border: 1px solid blue; border-radius: 10px">Awesome Item App</h1>
+	<h1 id="app-name">Awesome Item App</h1>
 
 	<%= yield %>
 
