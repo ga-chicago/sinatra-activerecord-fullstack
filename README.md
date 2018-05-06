@@ -1338,12 +1338,19 @@ Once again, head on over to your console and check out what SQL this is writing 
 
 Cool so, now you can pretty do everything with Sinatra that you were doing with Express.
 
-# You completed the lab/homework! Good job! 
+# You completed the lesson/lab/homework! Good job! 
 
 ## Hungry for more?
 
 ### Separate the back and front end: 
- 
+
+ * **Create a new branch for this called `hungry-for-more`:
+  
+```bash
+$ git checkout -b hungry-for-more
+```
+
+
  * Add jQuery to the `layout.erb`. 
  * Create additional routes (leave the old ones) that do the same CRUD operations using ActiveRecord, but that only send back JSON.   
  * In the JSON responses, include a message in the JSON saying if it was successful or something like that.  Make that part identical for all the routes.  In general make the JSON responses as consistently formatted as possible.
