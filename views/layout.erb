@@ -19,6 +19,15 @@
 
 	<%= yield %>
 
+	<% if session[:message] %>
+		<p class="msg">
+			<%= session[:message] %>
+		</p>
+
+		<% session[:message] = nil
+	
+	end %>
+
 
 	<small>Thanks for using this site. This 'footer' is in the main layour.erb and will appear on all pages. © 2018 no one.</small>	
 </body>
