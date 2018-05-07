@@ -31,12 +31,12 @@ class UserController < ApplicationController
 	end
 
 #why the post route only work with the user/register?
-	post '/user/register' do
+	post '/register' do
 		@user = User.new
-		session[:user_id] = @user.id
 		@user.username = params[:username]
 		@user.password = params[:password]
 		@user.save
+		session[:user_id] = @user.id
 		session[:logged_in] = true
 		session[:username] = @user.username
 		session[:message] = "Thank you for registering as #{@user.username}. Enjoy the site!"
