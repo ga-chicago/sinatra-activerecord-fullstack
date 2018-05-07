@@ -1155,7 +1155,7 @@ nav {
 In Express we could have written router-level middleware like this at the top of our controller:
 
 ```js
-app.use((req, res, next) => {
+router.use((req, res, next) => {
 	if(!session.loggedIn) {
 		req.session.message = "You must be logged in to do that."
 		res.redirect('/user/login');
