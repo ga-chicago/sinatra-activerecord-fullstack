@@ -1344,7 +1344,7 @@ Cool so, now you can pretty do everything with Sinatra that you were doing with 
 
 ### Separate the back and front end: 
 
- * **Create a new branch for this called `hungry-for-more`:
+ * **Create a new branch for this called `hungry-for-more`**:
   
 ```bash
 $ git checkout -b hungry-for-more
