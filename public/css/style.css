@@ -1,0 +1,33 @@
+body {
+	background-color: lightblue;
+}
+
+.form-partial {
+	border: 1px solid red; 
+	border-radius: 4px;
+}
+
+#app-name {
+	border: 1px solid blue;
+	border-radius: 10px;
+}
+
+nav p {
+	display: inline-block;
+}
+
+h2 {
+	border: 1px solid yellow;
+	border-radius: 5px
+}
+
+p.msg {
+	background: lightgreen;
+	color: brown;
+	border:1px solid black;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
